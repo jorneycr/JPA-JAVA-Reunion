@@ -21,7 +21,7 @@ public class EntityManagerUtil{
     public static void main(String[] args) {
         EntityManager manager = EntityManagerUtil.getEntityManager();
         if (manager != null) {
-            System.out.println("EntityManager class ===> " + manager.getClass().getCanonicalName());
+//            System.out.println("EntityManager class ===> " + manager.getClass().getCanonicalName());
             // Perform database operations using the EntityManager.
             // ...
             // Close the EntityManager when done.
