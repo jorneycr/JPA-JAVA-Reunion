@@ -24,7 +24,7 @@ public class ReunionDao extends AbstractDao<Reunion>{
     public List<Reunion> reunionesManyana() {
         String qlString = "FROM " + Reunion.class.getName() + " WHERE fecha between ?1 and ?2";
         Query query = getEntityManager().createQuery(qlString);
-        LocalDate manyana = LocalDate.now().plus(100, ChronoUnit.DAYS);
+        LocalDate manyana = LocalDate.now().plus(1, ChronoUnit.DAYS);
         query.setParameter(1, manyana.atStartOfDay());
         query.setParameter(2, manyana.plus(1, ChronoUnit.DAYS).atStartOfDay());
         return query.getResultList();
